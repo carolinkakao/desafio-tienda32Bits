@@ -74,9 +74,11 @@ export default new Vuex.Store({
           }
           else if(juego.codigo == codigo && juego.stock == 0){
             Swal.fire({
+              position: 'top-end',
               icon: 'error',
               title: 'Juego sin Stock',
               text: 'Comunicate con tu proovedor para conseguir mas copias de este juego',
+              timer: 1500,
               footer: `${juego.nombre}`
             })
           }
